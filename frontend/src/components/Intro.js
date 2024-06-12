@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { loginUser } from '../services/api';
 import Header from './Header';
 import Footer from './Footer';
+import '../styles/intro.css';
 
 const Intro = () => {
   const [email, setEmail] = useState('');

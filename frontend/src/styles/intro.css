@@ -1,0 +1,119 @@
+/* Estilo geral do componente Intro */
+.container {
+    padding: 20px;
+  }
+  
+  .hero-content {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  #login {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  #login h2 {
+    margin-bottom: 20px;
+  }
+  
+  #loginForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #loginForm .form-control {
+    margin-bottom: 15px;
+  }
+  
+  #loginForm .btn {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .register-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos para seção de benefícios e prova social */
+  #beneficios, #prova-social {
+    margin-top: 40px;
+  }
+  
+  #beneficios h2, #prova-social h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #beneficios ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #beneficios ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  #beneficios ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: green;
+  }
+  
+  blockquote {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #ccc;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: right;
+    color: #555;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 0 15px;
+    }
+  
+    #login {
+      padding: 15px;
+      margin: 0 15px;
+    }
+  
+    #beneficios, #prova-social {
+      padding: 0 15px;
+    }
+  
+    blockquote {
+      padding: 15px;
+    }
+  }
+  

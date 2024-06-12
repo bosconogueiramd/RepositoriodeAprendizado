@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import { registerUser } from '../services/api';
+import { registerUser, getUsers } from '../services/api';
+import '../styles/register.css';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -14,14 +15,43 @@ const Register = () => {
     email: '',
     password: '',
   });
+  const [emailError, setEmailError] = useState('');
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === 'checkbox' ? checked : value,
-    });
+    if (name === 'crm' || name === 'matricula') {
+      if (/^\d*$/.test(value)) {
+        setFormData({
+          ...formData,
+          [name]: value.slice(0, name === 'crm' ? 5 : 7),
+        });
+      }
+    } else if (name === 'birthDate') {
+      const formattedValue = value.replace(/\D/g, '').slice(0, 8);
+      const day = formattedValue.slice(0, 2);
+      const month = formattedValue.slice(2, 4);
+      const year = formattedValue.slice(4, 8);
+      setFormData({
+        ...formData,
+        [name]: `${day}${day.length === 2 ? '/' : ''}${month}${month.length === 2 ? '/' : ''}${year}`,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: type === 'checkbox' ? checked : value,
+      });
+    }
+  };
+
+  const handleEmailCheck = async (email) => {
+    const users = await getUsers();
+    const emailExists = users.some((user) => user.email === email);
+    if (emailExists) {
+      setEmailError('E-mail já cadastrado.');
+    } else {
+      setEmailError('');
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -31,6 +61,7 @@ const Register = () => {
     if (isAdmin) {
       newUser.matricula = matricula;
     }
+    if (emailError) return;
     const response = await registerUser(newUser);
     if (response.message === 'Usuário registrado com sucesso') {
       navigate('/'); // Redirecionar para a página de login
@@ -88,10 +119,12 @@ const Register = () => {
                 id="email"
                 name="email"
                 value={formData.email}
+                onBlur={() => handleEmailCheck(formData.email)}
                 onChange={handleChange}
                 className="form-control"
                 required
               />
+              {emailError && <p className="text-danger">{emailError}</p>}
             </div>
             <div className="form-group">
               <label htmlFor="password">Senha: </label>
