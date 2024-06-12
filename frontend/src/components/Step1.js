@@ -11,17 +11,20 @@ const Step1 = () => (
       <section>
         <h2>Passo 1. Solicitando seu acesso aos computadores da CECIR antes de seu plantão.</h2>
         <p>O acesso ao sistema operacional de cada computador ocorre por login e senha.</p>
+        <p>Figura 1. Tela inicial de acesso ao Sistema Operacional do computador de regulação.</p>
         <figure>
           <img src={`${process.env.PUBLIC_URL}/imagens/Figura1.png`} alt="Tela inicial de acesso ao Sistema Operacional do computador de regulação" />
           <figcaption>Legenda: Preencha com login e senha para ter acesso ao computador de sua bancada de regulação.</figcaption>
         </figure>
         <p>Antes de seu primeiro plantão, você deve solicitar à coordenação de sua cooperativa o envio de suas informações de cadastro, para que o setor responsável da CECIR providencie sua senha de acesso ao Sistema Operacional do computador de sua bancada de regulação.</p>
         <p>Após logado no sistema operacional de sua máquina, você deverá abrir um navegador (sugestão: Chrome ou Firefox) e digitar <a href="https://saude.fastmedic.com.br/fortaleza">https://saude.fastmedic.com.br/fortaleza</a>.</p>
+       <p>Figura 2. Tela de acesso ao sistema de informática de regulação médica.</p>
         <figure>
           <img src={`${process.env.PUBLIC_URL}/imagens/Figura2.png`} alt="Tela de acesso ao sistema de informática de regulação médica" />
           <figcaption>Legenda: A regulação ambulatorial é representada em “CENTRAL DE PROCEDIMENTOS”.</figcaption>
         </figure>
         <p>Você deverá clicar sob a opção Central de Procedimentos. Após esse passo, você será conduzido à tela de login do sistema de regulação médica, Fastmedic®.</p>
+        <p>Figura 3. Tela de login do sistema de regulação médica </p>
         <figure>
           <img src={`${process.env.PUBLIC_URL}/imagens/Figura3.png`} alt="Tela de login do sistema de regulação médica Fastmedic" />
           <figcaption>Legenda: Preencha com seu usuário e senha, fornecidos com antecedência ao plantão por sua cooperativa.</figcaption>
