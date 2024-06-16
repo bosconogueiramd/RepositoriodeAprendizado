@@ -61,7 +61,7 @@ const Step5 = () => (
           <figcaption>Legenda: As informações necessárias para definir a prioridade de regulação estão expostas na figura por “Motivo do Encaminhamento”. Neste campo, você deverá visualizar as informações mínimas para definir a prioridade de regulação.</figcaption>
         </figure>
         <p>
-          <a href={`${process.env.PUBLIC_URL}/PDF/Anexo2.pdf`} target="_blank">Anexo 2: Nota Técnica “Encaminhamento e Regulação de Consultas e Exames via Prontuário Eletrônico”</a>
+          <a href={`${process.env.PUBLIC_URL}/PDF/Anexo2.pdf`} target="_blank" rel="noopener noreferrer">Anexo 2: Nota Técnica “Encaminhamento e Regulação de Consultas e Exames via Prontuário Eletrônico”</a>
         </p>
         <p>Nesse momento, veja o Anexo 2 - Nota Técnica “Encaminhamento e Regulação de Consultas e Exames via Prontuário Eletrônico”. Agora que você leu a NT supracitada, precisamos fazer algumas considerações. Após analisar no sistema de regulação as informações mínimas necessárias para a regulação, você deverá priorizar (seta vermelha) a solicitação entre um de quatro níveis (PRIORIDADE EMERGENCIAL, ALTA PRIORIDADE, MÉDIA PRIORIDADE E BAIXA PRIORIDADE). Estando a solicitação adequada para priorização e após priorizar, você deverá clicar em autorizar (seta verde). Caso as informações sejam insuficientes para definir a prioridade de regulação, você deverá utilizar o campo de escrita do médico regulador para solicitar as informações mínimas necessárias para priorização e regulação (ex.: “Por favor, detalhar história clínica e exame físico. Anexar exames, caso existam. Informar se há sinais de alerta.”). Em seguida, o médico regulador deverá clicar em “Devolver ao Estab. Solic.”, devolvendo então a solicitação para que o estabelecimento solicitante possa retificar ou justificar a solicitação de consulta ou exame.</p>
         <p>Quando as informações presentes em “Motivo do Encaminhamento” forem suficientes, você deverá selecionar em “Mudar Priorização” a prioridade adequada e autorizar a consulta, clicando em “Autorizar”, representada pela seta verde, na Figura 11.</p>
@@ -74,7 +74,7 @@ const Step5 = () => (
         </figure>
         <p>Outra situação em que o médico regulador deve negar um pedido de solicitação de consulta ou de exame ocorre quando a solicitação não é realizada por um profissional de saúde (médico, odontologista, ou enfermeiro). Nesses casos, a Direção da CECIR orienta que o pedido seja negado, atendendo ao que informa a CI Nº 002/2024 (Vide ANEXO III).</p>
         <p>
-          <a href={`${process.env.PUBLIC_URL}/PDF/Anexo3.pdf`} target="_blank">Anexo 3: Negando uma solicitação de consulta ou exame</a>
+          <a href={`${process.env.PUBLIC_URL}/PDF/Anexo3.pdf`} target="_blank" rel="noopener noreferrer">Anexo 3: Negando uma solicitação de consulta ou exame</a>
         </p>
         <h3>ALTERAÇÃO DE FILA</h3>
         <p>Em alguns casos, o médico regulador notará que a solicitação de consulta ou de exame foi inserida em uma fila inadequada de regulação. Um exemplo que ilustra essa situação são solicitações de consulta para CONSULTA EM OTORRINOLARINGOLOGIA PEDIÁTRICA. Algumas vezes, por engano, o solicitante solicita CONSULTA EM ORTOPEDIA PEDIÁTRICA. Esse lapso pode ocorrer, por exemplo, por proximidade do campo de clique do mouse, entre as filas. Ao notar um erro de seleção de fila, o médico regulador poderá alterar a solicitação para a fila adequada. Recomenda-se priorização e autorização dessa solicitação. As figuras 13 e 14 ilustram o passo a passo de alteração de fila.</p>
@@ -90,7 +90,7 @@ const Step5 = () => (
           <figcaption>Legenda: Clique em “Nome do procedimento a ser pesquisado” e inicie a digitação com o nome da fila adequada para qual vai retificar o pedido de consulta ou de exame. Após selecionar a fila correta, clique em “Salvar”.</figcaption>
         </figure>
         <h3>DEVOLVIDOS AO MÉDICO REGULADOR E DEVOLVIDOS AO ESTABELECIMENTO SOLICITANTE</h3>
-        <p>Quando há necessidade de esclarecimento do quadro clínico, o médico regulador poderá retornar a solicitação de consulta ou exame ao estabelecimento solicitante. Nesses casos, deverá descrever o motivo pelo qual devolve a solicitação de consulta ou exame, no campo “Texto”. Em seguida, deverá clicar em “Devolver ao Estab. Solic.”.</p>
+        <p>Quando há necessidade de esclarecimento do quadro clínico, o médico regulador poderá retornar a solicitação de consulta de exame ao estabelecimento solicitante. Nesses casos, deverá descrever o motivo pelo qual devolve a solicitação de consulta ou exame, no campo “Texto”. Em seguida, deverá clicar em “Devolver ao Estab. Solic.”.</p>
         <p>Figura 15. Devolvendo ao Estabelecimento solicitante.</p>
         <figure className="text-center">
           <img src={`${process.env.PUBLIC_URL}/imagens/Figura15.png`} alt="Devolvendo ao Estabelecimento solicitante" className="img-fluid" />
@@ -119,3 +119,4 @@ const Step5 = () => (
 );
 
 export default Step5;
+ 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getUserById, submitEvaluation } from '../services/api';
+import { getUserById } from '../services/api'; // Removido submitEvaluation pois não está sendo usado
 import Header from './Header';
 import Footer from './Footer';
 
